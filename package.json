@@ -1,0 +1,52 @@
+{
+  "name": "jerry-demo-server",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "egg": "^2.15.1",
+    "egg-scripts": "^2.13.0",
+    "joi": "^17.4.0",
+    "mqtt": "^4.2.6",
+    "websocket": "^1.0.34"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.3.7",
+    "egg-mock": "^3.19.2",
+    "eslint": "^4.18.1",
+    "eslint-config-egg": "^7.0.0",
+    "factory-girl": "^5.0.2",
+    "sequelize-cli": "^4.0.0",
+    "webpack": "^5.39.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-jerry-demo-server",
+    "stop": "egg-scripts stop --title=egg-server-jerry-demo-server",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "eslintIgnore": [
+    "coverage",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "private": true
+}
