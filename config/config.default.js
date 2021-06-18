@@ -7,7 +7,11 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1623729369384_8185';
 
   // add your config here
-  config.middleware = [ 'sanitizer' ];
+  // config.middleware = [ 'sanitizer' ];
+
+  config.security = {
+    csrf: false
+  };
 
   return config;
 };

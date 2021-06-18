@@ -38,7 +38,7 @@ module.exports = app => {
 
       resolve(connection);
 
-      wsService.sendNumber();
+      wsService.init();
     });
   });
 };

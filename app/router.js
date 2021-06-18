@@ -2,10 +2,10 @@ module.exports = app => {
 
   const { router, controller } = app;
 
-  router.prefix('/api');
+  // router.prefix('/api');
 
   router.get('/', controller.home.index);
 
-  router.get('/list', controller.home.list);
-  router.get('/execute', controller.home.execute);
+  router.post('/list', controller.home.list);
+  router.post('/execute', controller.home.execute);
 };

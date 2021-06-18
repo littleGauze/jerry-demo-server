@@ -9,7 +9,6 @@ module.exports = app => {
     async index() {
       const { ctx } = this;
       // await this.validate('index');
-      await this.mqttServie.test();
       ctx.body = 'hi egg';
     }
 
@@ -34,7 +33,7 @@ module.exports = app => {
         },
       });
 
-      return {
+      ctx.body = {
         status: 0,
         data: devices,
       };
@@ -50,7 +49,7 @@ module.exports = app => {
       // switch the light
       state = 'on';
 
-      return {
+      ctx.body = {
         status: 0,
         data: {
           switch: state,

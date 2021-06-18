@@ -6,12 +6,21 @@ const type = {
 };
 
 module.exports = class WebSocketService extends Service {
+  get mqttService() {
+    return this.ctx.service.mqtt;
+  }
+
   get ws() {
     return this.app.lib.websocket;
   }
 
   parseMessage(msg) {
     console.log('parse message ', msg);
+  }
+
+  async init() {
+    this.sendNumber();
+    this.mqttService.init();
   }
 
   async sendNumber() {

@@ -3,7 +3,6 @@ const mqtt = require('mqtt');
 
 module.exports = class MqttService extends Service {
   constructor(...args) {
-    console.log(args);
     super(...args);
 
     const client = mqtt.connect('mqtt://test.mosquitto.org');
@@ -22,7 +21,7 @@ module.exports = class MqttService extends Service {
     });
   }
 
-  async test() {
-    console.log('test invoked!');
+  async init() {
+
   }
 };
